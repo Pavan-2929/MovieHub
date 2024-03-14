@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const page = async ({ params }) => {
@@ -12,11 +13,11 @@ const page = async ({ params }) => {
   return (
     <div className="bg-gray-100 p-6 rounded-lg shadow-md">
       <div className="flex justify-center">
-        <img
+        <Image
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt=""
           className="w-[20vw] h-auto rounded-lg"
-        />
+        ></Image>
       </div>
       <div className="mt-6">
         <p className="text-2xl font-semibold text-gray-800">
