@@ -2,9 +2,8 @@ import Card from "@/components/Card";
 
 const API_KEY = process.env.API_KEY;
 
-export default async function Home({searchParams}) {
-
-  const search = searchParams.search || "fetchTrending"
+export default async function Home({ searchParams }) {
+  const search = searchParams.search || "fetchTrending";
 
   const res = await fetch(
     `https://api.themoviedb.org/3${
@@ -17,11 +16,9 @@ export default async function Home({searchParams}) {
   }
   const results = data.results;
 
-  console.log(results);
-
   return (
     <div>
-      <Card results={results}/>
+      <Card results={results} />
     </div>
   );
 }
