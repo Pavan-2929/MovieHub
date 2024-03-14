@@ -11,7 +11,9 @@ const Card = ({ results }) => {
           className="bg-white p-4 rounded-lg shadow-md"
         >
           <img
-            src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
+            src={`https://image.tmdb.org/t/p/original/${
+              result.backdrop_path || result.poster_path
+            }`}
             alt={result.original_title}
             className="w-full h-72 rounded-md mb-4"
           />

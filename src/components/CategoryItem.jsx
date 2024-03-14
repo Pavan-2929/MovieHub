@@ -8,10 +8,12 @@ const CategoryItem = ({ text, param }) => {
   const searchParams = useSearchParams();
 
   const searchItem = searchParams.get("search");
+
+  const isTrending = param === "fetchTrending" && !searchItem
   return (
     <div
       className={`hover:text-amber-500 ${
-        searchItem === param
+        (searchItem === param || isTrending)
           ? "text-amber-500 underline underline-offset-4 decoration-2 decoration-amber-500"
           : ""
       } `}
