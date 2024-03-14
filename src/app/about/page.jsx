@@ -1,4 +1,19 @@
+import { useRouter } from "next/router";
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+
 export default function About() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AboutContent searchParams={searchParams} />
+    </Suspense>
+  );
+}
+
+const AboutContent = ({ searchParams }) => {
   return (
     <div className="max-w-6xl mx-auto p-3 space-y-4">
       <h1 className="text-2xl font-medium text-amber-600">About</h1>
@@ -33,4 +48,4 @@ export default function About() {
       </p>
     </div>
   );
-}
+};
