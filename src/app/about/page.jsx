@@ -1,9 +1,7 @@
-import { useRouter } from "next/router";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function About() {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   return (
