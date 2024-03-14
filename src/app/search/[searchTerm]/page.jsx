@@ -1,7 +1,7 @@
 import Card from "@/components/Card";
 import React from "react";
 
-const page = async ({ params }) => {
+const SearchTerm = async ({ params }) => {
   const searchTerm = params.searchTerm;
 
   const res = await fetch(
@@ -20,4 +20,4 @@ const page = async ({ params }) => {
   );
 };
 
-export default page;
+export default SearchTerm;

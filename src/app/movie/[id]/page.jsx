@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const page = async ({ params }) => {
+const SingleMovie = async ({ params }) => {
   const movieId = params.id;
 
   const res = await fetch(
@@ -39,4 +39,4 @@ const page = async ({ params }) => {
   );
 };
 
-export default page;
+export default SingleMovie;
